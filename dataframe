@@ -1,0 +1,16 @@
+import pandas as pd
+
+#以下为dataframe常见功能
+
+df = pd.DataFrame(columns=['姓名','年龄','性别'], index=['甲','乙','丙'])
+print(df.index)
+print(df)
+print(df.iloc[[1,2],[0,1]])
+#获取某行某列：这个公式先行后列，第1个是第2个，第0个是第一个
+print(df.iloc[0:2])
+#列完整，取行数；这个公式是取左端，不取右端即[0，1]
+a= df.drop('年龄',axis=1)
+#删除列
+b= df.drop('甲')
+#删除列
+print (b)
